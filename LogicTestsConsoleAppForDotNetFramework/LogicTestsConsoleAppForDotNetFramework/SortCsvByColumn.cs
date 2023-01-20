@@ -15,6 +15,7 @@ namespace LogicTestsConsoleAppForDotNetFramework
                 csvFileContent = @"myjinxin2015;raulbc777;smile67;Dentzil;SteffenVogel_79\n
                                  17945;10091;10088;3907;10132\n
                                  2;12;13;48;11";
+
             var rows = csvFileContent.Split('\n');
             var csvHeaders = rows[0].Split(';').ToList();
             var csvShortedHeader = csvHeaders.OrderBy(a => a).ToList();

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CsvReadingAndDrowingMap.Models.DataDto>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>   @Html.DisplayNameFor(model => model.STATION_ID) </th>
+            <th> @Html.DisplayNameFor(model => model.SITE_NAME) </th>   
+            <th> @Html.DisplayNameFor(model => model.STATE) </th>
+            <th>  @Html.DisplayNameFor(model => model.CITY) </th>
+            <th> @Html.DisplayNameFor(model => model.ADDRESS) </th> 
+            <th> @Html.DisplayNameFor(model => model.CLUSTER_MEDIAN_PRICE) </th>
+            <th> @Html.DisplayNameFor(model => model.CLIENT_MARKET_PRICE) </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.STATION_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SITE_NAME)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.STATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CITY)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ADDRESS)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.CLUSTER_MEDIAN_PRICE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CLIENT_MARKET_PRICE)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
